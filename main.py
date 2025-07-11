@@ -1,3 +1,4 @@
+from constants import *
 import pygame
 def main():
     print("Starting Asteroids!")
