@@ -31,7 +31,7 @@ def main():
             dt = clock.tick(60) / 1000
 
         updatable.update(dt)
-        
+
         for asteroid in asteroids:
             if player.collides(asteroid):
                 print("Game over!")
@@ -40,7 +40,7 @@ def main():
         for asteroid in asteroids:
             for shot in shots_fired:
                 if asteroid.collides(shot):
-                    asteroid.kill()
+                    asteroid.split()
                     shot.kill()
 
         screen.fill("black")
