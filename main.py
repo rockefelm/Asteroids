@@ -25,6 +25,10 @@ def main():
                 return
             dt = clock.tick(60) / 1000
         updatable.update(dt)
+        for asteroid in asteroids:
+            if player.collides(asteroid):
+                print("Game over!")
+                pygame.quit()
         screen.fill("black")
         for object in drawable:
             object.draw(screen)
